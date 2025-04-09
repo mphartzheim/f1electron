@@ -1,0 +1,233 @@
+/* results.css */
+
+/* === Race List === */
+.race-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    text-align: left;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.race-list li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #444;
+    transition: background 0.3s ease;
+}
+
+.race-list li.completed {
+    opacity: 0.6;
+}
+
+/* === Results List === */
+.results-list {
+    list-style: none;
+    text-align: left;
+    max-width: 600px;
+    margin: 1rem auto;
+    padding-left: 1rem;
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.results-list li {
+    margin-bottom: 0.5rem;
+}
+
+.results-list li small {
+    display: block;
+    color: var(--subtle-text-color);
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    line-height: 1.4;
+}
+
+.results-list li strong {
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+/* === Podium + Fastest Lap === */
+.pole-position {
+    border-left: 4px solid #FFD700;
+    padding-left: 0.5rem;
+    background-color: var(--surface-color);
+}
+
+/* Dark theme: Pole Position */
+body.theme-dark .pole-position {
+    background-color: #222;
+    border-left: 4px solid #FFD700;
+    padding-left: 0.5rem;
+}
+
+/* Light theme: Pole Position */
+body.theme-light .pole-position {
+    background-color: #fffbe6;
+    border-left: 4px solid #FFD700;
+    padding-left: 0.5rem;
+}
+
+.podium-1 {
+    border-left: 4px solid #FFD700;
+    padding-left: 0.5rem;
+    background-color: #222;
+}
+
+.podium-2 {
+    border-left: 4px solid #C0C0C0;
+    padding-left: 0.5rem;
+    background-color: #222;
+}
+
+.podium-3 {
+    border-left: 4px solid #CD7F32;
+    padding-left: 0.5rem;
+    background-color: #222;
+}
+
+.fastest-lap {
+    border-left: 4px solid purple;
+    padding-left: 0.5rem;
+    background-color: #222;
+}
+
+.podium-1.fastest-lap {
+    border-left: 4px solid gold;
+    box-shadow: inset 8px 0 0 0 purple;
+    padding-left: 0.75rem;
+    background-color: #222;
+}
+
+.podium-2.fastest-lap {
+    border-left: 4px solid silver;
+    box-shadow: inset 8px 0 0 0 purple;
+    padding-left: 0.75rem;
+    background-color: #222;
+}
+
+.podium-3.fastest-lap {
+    border-left: 4px solid #CD7F32;
+    box-shadow: inset 8px 0 0 0 purple;
+    padding-left: 0.75rem;
+    background-color: #222;
+}
+
+/* === Podium Backgrounds === */
+
+/* DARK THEME styles */
+body.theme-dark .podium-1 {
+    background-color: #222;
+    border-left: 4px solid #FFD700;
+}
+
+body.theme-dark .podium-2 {
+    background-color: #222;
+    border-left: 4px solid #C0C0C0;
+}
+
+body.theme-dark .podium-3 {
+    background-color: #222;
+    border-left: 4px solid #CD7F32;
+}
+
+body.theme-dark .fastest-lap {
+    background-color: #222;
+    border-left: 4px solid purple;
+}
+
+/* LIGHT THEME styles */
+body.theme-light .podium-1 {
+    background-color: #fffbe6;
+    border-left: 4px solid #FFD700;
+}
+
+body.theme-light .podium-2 {
+    background-color: #f1f1f1;
+    border-left: 4px solid #C0C0C0;
+}
+
+body.theme-light .podium-3 {
+    background-color: #f9efe5;
+    border-left: 4px solid #CD7F32;
+}
+
+body.theme-light .fastest-lap {
+    background-color: #f5f0ff;
+    border-left: 4px solid purple;
+}
+
+/* === Standings Grid === */
+.standings-grid {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+.standings-column {
+    flex: 1 1 300px;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+body.theme-dark .standings-column {
+    background-color: #1d1d1d;
+    box-shadow: 0 0 10px #000;
+}
+
+body.theme-light .standings-column {
+    background-color: var(--surface-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.standings-column h3 {
+    margin-top: 0;
+}
+
+.standings-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.standings-column li {
+    margin-bottom: 0.5rem;
+}
+
+.driver-standings li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.driver-standings li strong {
+    font-weight: 500;
+}
+
+.next-race {
+    background-color: var(--surface-color);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 0.5rem;
+    font-weight: bold;
+}
+
+.session-label {
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.session-time {
+    color: var(--subtle-text-color);
+}
+
+.next-session {
+    color: var(--accent-color);
+    font-weight: bold;
+}

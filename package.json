@@ -1,15 +1,45 @@
 {
   "name": "f1electron",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
+  "version": "1.0.1",
+  "description": "F1Electron – F1 race data viewer built with Electron",
+  "main": "main.js",
+  "author": "joypunk",
   "license": "ISC",
-  "description": "",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
   "devDependencies": {
-    "electron": "^35.1.4"
+    "electron": "^35.1.4",
+    "electron-builder": "^26.0.12"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  },
+  "build": {
+    "appId": "com.joypunk.f1electron",
+    "productName": "F1Electron",
+    "files": [
+      "src/**/*",
+      "main.js",
+      "index.html",
+      "package.json"
+    ],
+    "directories": {
+      "output": "dist"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Utility",
+      "icon": "assets/icon.png"
+    },
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    }
   }
 }

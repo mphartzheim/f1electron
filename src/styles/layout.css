@@ -1,0 +1,118 @@
+/* layout.css */
+
+/* === Tab Layout === */
+.tab-container {
+    position: relative;
+    min-height: 400px;
+}
+
+.tab {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.tab.active {
+    opacity: 1;
+    pointer-events: all;
+    z-index: 1;
+    border-top: 2px solid var(--accent-color);
+    /* moved from themes? */
+}
+
+.hidden {
+    display: none;
+}
+
+/* === Countdown Bar === */
+.countdown-bar {
+    font-size: 0.9rem;
+    color: var(--text-color);
+    margin-top: -0.5rem;
+    margin-bottom: 1.5rem;
+    opacity: 0.85;
+}
+
+/* === Modal === */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal.hidden {
+    display: none;
+}
+
+.modal-content {
+    background: #1d1d1d;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 20px #000;
+    position: relative;
+    width: 90%;
+    max-width: 600px;
+}
+
+.web-modal-content {
+    width: 90%;
+    max-width: 800px;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#web-frame {
+    flex: 1;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+}
+
+.close-button {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    background: #333;
+    border: none;
+    color: white;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.tabs {
+    margin-bottom: 1rem;
+}
+
+.session-grid {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 0.3rem 1rem;
+    max-width: 500px;
+    margin: 1rem auto 0;
+    text-align: left;
+}
+
+#theme-selector-container {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    z-index: 9999;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}

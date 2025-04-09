@@ -1,0 +1,145 @@
+/* components.css */
+
+/* === Button Row === */
+.button-row {
+    margin: 1rem 0;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* === Sub-tabs Navigation === */
+.sub-tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+}
+
+.sub-tab {
+    background: none;
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    color: var(--text-color);
+}
+
+.sub-tab.active {
+    border-bottom: 2px solid var(--accent-color);
+    font-weight: bold;
+}
+
+/* Light theme fix for better contrast */
+body.theme-light .sub-tab {
+    color: #333;
+}
+
+body.theme-light .sub-tab.active {
+    border-bottom-color: var(--accent-color);
+    font-weight: bold;
+}
+
+/* === Live Indicator === */
+.live-indicator {
+    margin-left: 0.5rem;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.85rem;
+    vertical-align: middle;
+}
+
+.live-indicator:hover {
+    text-decoration: underline;
+}
+
+/* === Wiki Links === */
+.wiki-link {
+    font-size: 0.9rem;
+    background: #333;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    margin-right: 0.3rem;
+}
+
+.wiki-link:hover {
+    background: #555;
+}
+
+/* === Results Mode Toggle Bar === */
+.results-mode-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.results-mode-nav button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.results-mode-label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--accent-color);
+}
+
+#theme-select {
+    background-color: var(--surface-color);
+    color: var(--text-color);
+    border: 1px solid var(--accent-color);
+    padding: 0.2rem 0.5rem;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 4px;
+    appearance: none;
+}
+
+.flag {
+    display: inline-block;
+    line-height: 1;
+}
+
+/* === Buttons === */
+.tab-button,
+.wiki-button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.25rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.tab-button:hover,
+.wiki-button:hover {
+    background: #444;
+}
+
+body.theme-light .tab-button,
+body.theme-light .wiki-button {
+    background-color: #eee;
+    color: #111;
+}
+
+body.theme-light .tab-button:hover,
+body.theme-light .wiki-button:hover {
+    background-color: #ddd;
+}

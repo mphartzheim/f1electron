@@ -1,0 +1,106 @@
+<!-- src/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>F1 Viewer</title>
+    <link rel="stylesheet" href="./styles/base.css" />
+    <link rel="stylesheet" href="./styles/layout.css" />
+    <link rel="stylesheet" href="./styles/components.css" />
+    <link rel="stylesheet" href="./styles/results.css" />
+    <link rel="stylesheet" href="./styles/themes.css" />
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+
+<body>
+    <div id="theme-selector-container">
+        <label for="theme-select">🎨 Theme:</label>
+        <select id="theme-select">
+            <option value="light">Light</option>
+            <option value="dark">Dark</option>
+            <option value="redbull">Red Bull</option>
+            <option value="ferrari">Ferrari</option>
+            <option value="mercedes">Mercedes</option>
+            <option value="mclaren">McLaren</option>
+            <option value="astonmartin">Aston Martin</option>
+            <option value="alpine">Alpine</option>
+            <option value="williams">Williams</option>
+            <option value="racingbulls">Racing Bulls</option>
+            <option value="kicksauber">Kick Sauber</option>
+            <option value="haas">Haas</option>
+        </select>
+    </div>
+
+    <h1>🏎️ <span class="accent">F1 Viewer</span></h1>
+    <div id="next-session-countdown" class="countdown-bar"></div>
+
+    <nav class="tabs">
+        <button data-tab="upcoming" class="tab-button">Upcoming</button>
+        <button data-tab="schedule" class="tab-button">Schedule</button>
+        <button data-tab="results" class="tab-button">Results</button>
+        <button data-tab="standings" class="tab-button">Standings</button>
+    </nav>
+
+    <div class="tab-container">
+        <section id="upcoming" class="tab active">
+            <div id="upcoming-content"></div>
+        </section>
+
+        <section id="schedule" class="tab">
+            <div id="schedule-content">
+                <div class="season-selector">
+                    <label for="season-select">Season:</label>
+                    <select id="season-select"></select>
+                </div>
+                <!-- Race list will be injected here -->
+            </div>
+        </section>
+
+        <section id="results" class="tab">
+            <div id="results-content"></div>
+        </section>
+
+        <section id="standings" class="tab">
+            <div id="standings-content"></div>
+        </section>
+    </div>
+
+    <!-- Map Modal -->
+    <div id="map-modal" class="modal hidden">
+        <div class="modal-content">
+            <button id="close-map" class="close-button" aria-label="Close map modal">✖</button>
+            <div id="map" style="height: 400px;"></div>
+        </div>
+    </div>
+
+    <!-- Web Modal -->
+    <div id="web-modal" class="modal hidden">
+        <div class="modal-content web-modal-content">
+            <button id="close-web" class="close-button" aria-label="Close web modal">✖</button>
+            <iframe id="web-frame" src="" frameborder="0"></iframe>
+        </div>
+    </div>
+
+    <script src="state.js"></script>
+    <script src="loaders/dataLoader.js"></script>
+    <script src="loaders/raceResults.js"></script>
+    <script src="loaders/sprintResults.js"></script>
+    <script src="loaders/qualifyingResults.js"></script>
+    <script src="ui/map.js"></script>
+    <script src="ui/modal.js"></script>
+    <script src="ui/schedule.js"></script>
+    <script src="ui/resultsView.js"></script>
+    <script src="ui/tabs.js"></script>
+    <script src="ui/countdown.js"></script>
+    <script src="ui/standings.js"></script>
+    <script src="utils/flags.js"></script>
+    <script src="utils/time.js"></script>
+    <script src="renderer.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+/* themes.css */
+
+/* ===== LIGHT & DARK BASE THEMES ===== */
+body.theme-light {
+    --bg-color: #ffffff;
+    --text-color: #1a1a1a;
+    --surface-color: #f9f9f9;
+    --accent-color: #e10600;
+    --subtle-text-color: #666;
+}
+
+body.theme-dark {
+    --bg-color: #121212;
+    --text-color: #f1f1f1;
+    --surface-color: #1e1e1e;
+    --accent-color: #e10600;
+    --subtle-text-color: #bbb;
+}
+
+/* ===== TEAM ACCENTS (2025 names) ===== */
+body.theme-redbull {
+    --accent-color: #dc0000;
+}
+
+body.theme-ferrari {
+    --accent-color: #ff1e1e;
+}
+
+body.theme-mercedes {
+    --accent-color: #00d2be;
+}
+
+body.theme-mclaren {
+    --accent-color: #ff8700;
+}
+
+body.theme-astonmartin {
+    --accent-color: #00ffab;
+}
+
+body.theme-alpine {
+    --accent-color: #fd4b71;
+}
+
+body.theme-williams {
+    --accent-color: #00a3e0;
+}
+
+body.theme-racingbulls {
+    --accent-color: #ff003c;
+}
+
+body.theme-kicksauber {
+    --accent-color: #00ff00;
+}
+
+body.theme-haas {
+    --accent-color: #e10600;
+}
